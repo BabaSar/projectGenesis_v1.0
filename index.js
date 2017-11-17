@@ -6,7 +6,8 @@ var uriId;
 var contentRefId;
 var uriIdLastHalf;
 
-//uriId is a 16 digit number
+//uriId and contentRefId are 16 digit numbers. The function below generates the unique 16 digits for each of these. 
+
 var randomSixteenDigitGenerator = function(){
     //alert("getSixteenDigitGen called!");
     //uriId = Math.floor(Math.random() * 9999999999999999 + 1000000000000000);
@@ -15,7 +16,7 @@ var randomSixteenDigitGenerator = function(){
     contentRefId = Math.floor(Math.random() * (9999999999999999 - 1000000000000000) + 1000000000000000);
 
     var uriIdAsString = String(uriId);
-    uriIdLastHalf = uriIdAsString.substr(8); //previously .substr(8,16);
+    uriIdLastHalf = uriIdAsString.substr(8); //This then uses the last half of the uriID; and gets used as part of the TitleMedium
 };
 
 
