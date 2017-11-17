@@ -315,7 +315,7 @@ var textProcessor = function(string){
     var string9 = string8.replace(/@epgDateTime@/g, epgDateObject.dateTime);
     var string10 = string9.replace(/@cutvServiceKey@/g, serviceKey);
 
-    //need to add text processing for Offer start and end also.
+    //the '/g' option means look for global occurences and replace each occurence. If this was omitted, then it would only replace the first occurence.
 
     return String(string10);
 };
