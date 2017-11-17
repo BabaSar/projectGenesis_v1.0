@@ -29,7 +29,7 @@ var DateTimeFormatter = function(year, month, date, periodInDays){
     date = Number(date);
     periodInDays = Number(periodInDays);
 
-    month = month - 1;
+    month = month - 1; //This is required since months (in UTC) start from 0. So for e.g if you enter month as "04", then really it is month 3.
 
     startDateTime = new Date();
     endDateTime = new Date();
