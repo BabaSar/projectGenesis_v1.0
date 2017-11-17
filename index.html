@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>GenesisADI</title>
+</head>
+
+<body>
+
+<h1>GenesisADI</h1>
+
+<strong>Provider ID: </strong><input type="text" name="providerID" id="providerIdTextBox" value="bsky_skysports"><br>
+
+<hr>
+
+<strong>License Start</strong><br>
+Year: <input type="text" id="licenseStartYear" value="2017" style="width: 40px">
+Month: <input type="text" id="licenseStartMonth" value="02" style="width: 40px">
+Day: <input type="text" id="licenseStartDay" value="13" style="width: 40px">
+Duration (days): <input type="text" id="licenseDaysDuration" value="60" style="width: 40px"><br>
+
+<hr>
+
+<strong>Offer Start</strong><br>
+Year: <input type="text" id="offerStartYear" value="2017" style="width: 40px">
+Month: <input type="text" id="offerStartMonth" value="02" style="width: 40px">
+Day: <input type="text" id="offerStartDay" value="13" style="width: 40px">
+Duration (days): <input type="text" id="offerDaysDuration" value="60" style="width: 40px"><br>
+
+<hr>
+
+<strong>Offer Type</strong><br>
+<form>
+    <input type="radio" name="radioButton" id="archiveRadioButton" value="Archive" checked> Archive<br>
+    <input type="radio" name="radioButton" id="cutvRadioButton" value="CUTV"> CUTV<br>
+    <input type="radio" name="radioButton" id="ipprRadioButton" value="CUTV"> IPPR<br>
+    <input type="radio" name="radioButton" id="estRadioButton" value="CUTV"> EST<br>
+</form>
+
+<p></p>
+
+Service Key (if applicable): <input type="text" id="cutvServiceKey" value="1301" style="width: 40px"><br>
+
+<p></p>
+
+epgDateTime (if applicable):<br>
+Year: <input type="text" id="epgDateTimeYear" value="2015" style="width: 30px">
+Month: <input type="text" id="epgDateTimeMonth" value="06" style="width: 30px">
+Day: <input type="text" id="epgDateTimeDay" value="10" style="width: 30px">
+Hour: <input type="text" id="epgDateTimeHour" value="15" style="width: 30px">
+Minutes: <input type="text" id="epgDateTimeMinutes" value="30" style="width: 30px">
+Seconds: <input type="text" id="epgDateTimeSeconds" value="05" style="width: 30px">
+OR
+<button id="randomizeEpgButton">
+    Randomize epgDateTime
+</button>
+
+<hr>
+
+<button id="generateButton">
+    <strong>GENERATE ADI</strong>
+</button>
+
+<p>
+    <textarea rows="25" cols="210" id="textArea"></textarea>
+</p>
+
+
+<!--<script>-->
+<!--require('./index.js');-->
+<!--</script>-->
+<!--<script src="./ADIBlocksGenerator.js"></script>-->
+<script src="resources/index.js"></script>
+
+</body>
+
+
+
+</html>
