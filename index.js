@@ -69,7 +69,7 @@ var epgDateTimeFormatter = function(year, month, day, hour, minutes, seconds){
 
     console.log(epgDateTime);
 
-    var epgDateTimeISOString = epgDateTime.toISOString().replace(/.000Z/g, "Z");
+    var epgDateTimeISOString = epgDateTime.toISOString().replace(/.000Z/g, "Z"); //Since the system doesn't accept 000Z, we get rid of the leading 0's and replace with just Z.
 
     return {
         dateTime: epgDateTimeISOString
@@ -94,8 +94,10 @@ var getInputDataProviderID = function(){
 };
 
 var getInputDataLicenseAndOfferDates = function(){
+    
+    //This function grabs the various information i.e license, offer, and epg info and then calls the DateTimeFormatter function to get these generated as ISOStrings (the manner required in the ADI)
 
-    //LICENSE
+    //GET LICENSE INFO FROM INPUT FIELDS
     var licenseYear = document.getElementById("licenseStartYear").value;
     var licenseMonth = document.getElementById("licenseStartMonth").value;
     var licenseDay = document.getElementById("licenseStartDay").value;
@@ -103,7 +105,7 @@ var getInputDataLicenseAndOfferDates = function(){
 
     licenseDatesObject = DateTimeFormatter(licenseYear,licenseMonth,licenseDay,licenseDurationDays);
 
-    //OFFER
+    //GET OFFER INFO FROM INPUT FIELDS
     var offerYear = document.getElementById("offerStartYear").value;
     var offerMonth = document.getElementById("offerStartMonth").value;
     var offerDay = document.getElementById("offerStartDay").value;
@@ -111,7 +113,7 @@ var getInputDataLicenseAndOfferDates = function(){
 
     offerDatesObject = DateTimeFormatter(offerYear,offerMonth,offerDay,offerDurationDays);
 
-    //EPG (for CUTV)
+    //GET EPG (for CUTV) INFO FROM INPUT FIELDS
     var epgYear = document.getElementById("epgDateTimeYear").value;
     var epgMonth = document.getElementById("epgDateTimeMonth").value;
     var epgDay = document.getElementById("epgDateTimeDay").value;
